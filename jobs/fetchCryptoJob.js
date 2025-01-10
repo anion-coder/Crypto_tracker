@@ -34,7 +34,7 @@ const fetchCryptoData = async () => {
           marketCap: coinData.market_cap,
           change24h: coinData.price_change_percentage_24h,
         },
-        timestamp: currentUTCTime.toISOString()   // This will be unique for each insertion
+        timestamp: new Date()  // This will be unique for each insertion
       }));
   
       const result = await Crypto.insertMany(documents);
@@ -47,8 +47,13 @@ const fetchCryptoData = async () => {
   };
   
   // Initialize cron job
-  const initCronJob = () => {
+  const initCronJob = async() => {
     try {
+      // Immediate first fetch
+      console.log('[INITIAL] Starting initial data fetch...');
+      await fetchCryptoData();
+
+
       console.log('Starting cron job...');
       cron.schedule('*/5 * * * *', async () => {  // Run every 5 minutes
         try {
