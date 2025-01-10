@@ -7,7 +7,7 @@ const api = axios.create({
   baseURL: 'https://api.coingecko.com/api/v3',
   headers: {
     accept: 'application/json',
-    'x-cg-demo-api-key': 'CG-KoW39K2VLdFne5Y1BqNnLchh',
+    'x-cg-demo-api-key': process.env.COINGECKO_API_KEY,
   },
   timeout: 5000 // Add timeout to prevent hanging
 });

@@ -4,6 +4,7 @@ const cookieParser = require('cookie-parser');
 require('./jobs/fetchCryptoJob'); 
 const cryptoRoutes = require('./routes/cryptoRoutes');
 const jobs = require('./jobs/fetchCryptoJob');
+require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -17,8 +18,8 @@ app.use(cookieParser()); // Parse cookies
 app.get('/', (req, res) => { res.send('Hello World!'); });
 app.use('/api',cryptoRoutes);
 
-// Connect to MongoDB
-mongoose.connect('mongodb+srv://siddhanthmoraje:fImfd9vy48T9LhbS@cluster0.ypc0ggk.mongodb.net/testDB?retryWrites=true&w=majority&appName=Cluster0', {
+// MongoDB connection
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   serverSelectionTimeoutMS: 30000,

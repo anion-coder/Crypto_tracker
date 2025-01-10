@@ -4,6 +4,7 @@
     "bee-queue": "^1.7.1",
     "bull": "^4.16.5",
     "cookie-parser": "^1.4.7",
+    "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "mongodb": "^6.12.0",
     "mongoose": "^8.9.4",
