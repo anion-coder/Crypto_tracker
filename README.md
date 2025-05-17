@@ -62,6 +62,8 @@ npm start
 
 ## API Endpoints
 
+The deployed API is available at: `http://crypto-tracker-api.ap-south-1.elasticbeanstalk.com`
+
 ### GET /api/stats
 Get the latest statistics for a cryptocurrency.
 
