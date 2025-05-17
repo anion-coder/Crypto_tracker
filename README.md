@@ -70,12 +70,15 @@ Get the latest statistics for a cryptocurrency.
 Query Parameters:
 - `coin`: The cryptocurrency ID (bitcoin, ethereum, or matic-network)
 
+Example Request:
+`http://crypto-tracker-api.ap-south-1.elasticbeanstalk.com/api/stats?coin=bitcoin`
+
 Example Response:
 ```json
 {
-  "price": 40000,
-  "marketCap": 800000000,
-  "24hChange": 3.4
+  "price": 103030,
+  "marketCap": 2046847647196,
+  "24hChange": -1.14249
 }
 ```
 
