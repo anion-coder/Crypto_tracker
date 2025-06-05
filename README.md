@@ -62,7 +62,7 @@ npm start
 
 ## API Endpoints
 
-The deployed API is available at: `http://crypto-tracker-api.ap-south-1.elasticbeanstalk.com`
+The deployed API is available at: `http://koinx-api.ap-south-1.elasticbeanstalk.com/`
 
 ### GET /api/stats
 Get the latest statistics for a cryptocurrency.
@@ -71,7 +71,7 @@ Query Parameters:
 - `coin`: The cryptocurrency ID (bitcoin, ethereum, or matic-network)
 
 Example Request:
-`http://crypto-tracker-api.ap-south-1.elasticbeanstalk.com/api/stats?coin=bitcoin`
+`http://koinx-api.ap-south-1.elasticbeanstalk.com/api/stats?coin=bitcoin`
 
 Example Response:
 ```json
